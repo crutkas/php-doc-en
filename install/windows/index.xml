@@ -19,6 +19,32 @@
   configuration issues that may be encountered.
  </simpara>
 
+ <note>
+  <title>Optional local development provisioning preview</title>
+  <para>
+   An experimental <link
+   xlink:href="https://github.com/crutkas/WindowsDeveloperConfig-oem/blob/crutkas-devconfig-fork-only-workloads/src/docs/windows-onboarding-preview.md">Microsoft
+   DevConfig PHP provisioning preview</link> is available in a personal fork.
+   This is not an official PHP recommendation or a Microsoft-signed release.
+   Its PHP workload installs PowerShell 7, the Visual C++ Redistributable,
+   and PHP; it does not install Composer, IIS, Apache, or frameworks.
+  </para>
+  <para>
+   Review the guide, source, and package terms before running it on a disposable
+   Windows development VM. Installers may request elevation. From the root of
+   the reviewed personal-fork checkout, run:
+   <screen>
+<![CDATA[
+.\src\Workloads\install-source.ps1 -Workload php
+]]>
+   </screen>
+   This runs unsigned development source and installs software; it is not a
+   dry run. Follow the guide's prerequisites and execution-policy requirements.
+   Use the official downloads and manual installation instructions below for
+   production and web server setup.
+  </para>
+ </note>
+
  &install.windows.recommended;
  &install.windows.manual;
  &install.windows.apache2;
